@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="google-site-verification" content="X-NyWbTQ-1CgZ7cvLZYPOc0BzO7PblJv201J3PJXAJI" />
+
+    
+    <title></title>
+
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.">
+    <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0, maximum-scale=1.5;">
+    
+
+    <!-- CSS that I added for the chat purposes -->  
+    <link href="/Users/bhavana/Desktop/chat1.css" rel="stylesheet">
+    <script src="http://cdn.optimizely.com/js/30715011.js"></script>
+
+    <link rel="icon" type="image/png" href="http://www.pubnub.com/static/images/structure/favicon.png">
+
+    <link rel="stylesheet" href="http://www.pubnub.com/static/css/styles.css">
+    <!--[if lt IE 9]> <script src="http://www.pubnub.com/static/js/ie.js?ts=1386730989"></script> <![endif]-->
+
+    
+        
+  </head>
+
+  <body id="app" class="satemplate">
+
+  <header class="navbar-fixed-top card">
+
+  <div class="full-width gray hidden-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar nav-secondary">
+            <ul class="nav pull-right">
+                            <li class=""><a href="/company/">Company</a></li>
+              <li><a href="/customers/" class="">Customers</a></li>
+              <li class=""><a href="/events/">Events</a></li>
+              <li class=""><a href="/company/contact-us/">Contact</a></li>
+              <li class=""><a href="/blog/">Blog</a></li>
+              <li>
+                <form class="form-search" action="/search/">
+                  <input type="hidden" name="cx" value="016318228531359278205:tloy-ifg-ta">
+                  <input type="hidden" name="cof" value="FORID:9">
+                  <input type="hidden" name="ie" value="UTF-8">
+                  <input type="search" value="" class="searchinput full-width" name="q" placeholder="Search">
+                  <button type="submit"><i class="fa fa-search"></i><span class="hidden">Search</span></button>
+                </form>
+              </li>
+              <li id="menu-register"><a href="/get-started/#get-started" class="btn btn-primary btn-modal">Get Started Free</a></li>
+              <li id="menu-login"><a href="http://pn.localhost.com/#login" target="_blank" class="btn btn-login">Log In</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="navbar nav-main">
+          <h1 class="logo pull-left">
+            <a href="/"><img src="http://www.pubnub.com/static/images/structure/pubnub.png" alt="Pub Nub" width="172" height="38"></a>
+          </h1>
+          <ul class="nav pull-right hidden-xs">
+            <li><a href="/iot-network/" >I<span style="text-transform:lowercase;">o</span>T Network</a></li>
+            <li class="dropdown-link">
+              <a href="/how-it-works/" >How it Works</a>
+              <ul class="dropdown-list animate">
+                <li>
+                  <a href="/how-it-works/data-streams/">
+                    <i><img src="http://www.pubnub.com/static/images/icons/data-streams.png" alt="data streams icon"></i>
+                    <span>Data Streams</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/how-it-works/presence/">
+                    <i><img src="http://www.pubnub.com/static/images/icons/presence.png" alt="presence icon"></i>
+                    <span>Presence</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/how-it-works/storage-and-playback/">
+                    <i class="push-down"><img src="http://www.pubnub.com/static/images/icons/storage.png" alt="storage and playback icon"></i>
+                    <span>Storage &amp; Playback</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/how-it-works/mobile/">
+                    <i class="push-down"><img src="http://www.pubnub.com/static/images/icons/mobile.png" alt="mobile icon"></i>
+                    Mobile Push Gateway
+                  </a>
+                </li>
+                <li>
+                  <a href="/how-it-works/analytics/">
+                    <i><img src="http://www.pubnub.com/static/images/icons/analytics.png" alt="analytics icon"></i>
+                    <span>Analytics</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/how-it-works/pam/" >
+                    <i class="fa fa-key" style="color:#ce1126 !important;font-size: 21px;position: relative;top: 8px;"></i>
+                    <span>
+                      Access Management
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/how-it-works/security/">
+                    <i><img src="http://www.pubnub.com/static/images/icons/security.png" alt="security icon"></i>
+                    <span>Security</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/how-it-works/network/">
+                    <i><img src="http://www.pubnub.com/static/images/icons/network.png" alt="network icon"></i>
+                    Network
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown-link">
+              <a href="/developers/" >Developers</a>
+               <ul class="dropdown-list animate">
+                <li>
+                  <a href="/developers/">
+                    <i class="fa fa-cogs"></i>
+                    <span>SDKs</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/console/">
+                    <i class="fa fa-terminal"></i>
+                    <span>Dev Console</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://help.pubnub.com/home" target="_blank">
+                    <i class="fa fa-question-circle"></i>
+                    <span>Support</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/documentation">
+                    <i class="fa fa-book"></i>
+                    <span>Docs</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/demos/" target="_blank">
+                    <i class="fa fa-video-camera"></i>
+                    <span>Demos</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/quick-start-guides/" target="_blank" style="padding-left: 13px;">
+                    <img src="http://www.pubnub.com/static/images/quick-start-guides-red.gif" style="height: 22px; width: 22px;" />
+                    <span>Quick Start</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/pricing/" >Pricing</a></li>
+            <li><a href="/in-action/" >Use Cases</a></li>
+          </ul>
+          <ul class="nav pull-right visible-xs">
+            <li><a href="/how-it-works/" >How it Works</a></li>
+            <li><a href="/pricing/" >Pricing</a></li>
+            <li><a href="/developers/" >Developers</a></li>
+            <li><a href="/in-action/" >Use Cases</a></li>
+            <li><a href="/customers/" >Customers</a></li>
+            <li><a href="/blog/" >Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<div id="alert_container" class="alert hidden"></div>
+
+
+<!-- ************************************************* -->
+
+<!-- Friendly editors! Please edit from here down ONLY -->
+
+<!-- ************************************************* -->
+
+
+<style media="screen">
+  a[name=tutorial]:before {
+    content:"";
+    display:block;
+    height:100px; /* fixed header height*/
+    margin:-100px 0 0; /* negative fixed header height */
+  }
+  #app-hero{
+    background:url(http://www.pubnub.com/static/images/congruent_pentagon.png);
+    background-attachment:fixed;
+  }
+</style>
+
+<div class="section gray padding-extra" id="app-hero">
+  <div class="container">
+    <h1 class="text-center">DashJazz IoT Connector</h1>
+    <h4 style = "text-align:center"> The Dashboard for the Internet Of Things </h4>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <p class="text-center">
+           PubNub introduces the simplest IoT dashboard that helps you detect online devices and also talk to them bidirectionally, in real-time.
+            By using PubNub, you can build these dashboards with just a few lines of code. Get out 
+        your favorite embedded device and start connecting! This dashboard lets you connect an Arduino to a Raspberry Pi, lets them
+        talk bidirectionally to each other and you can view which device is online at any instant. </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 padding-top text-center">
+      <a class="btn btn-primary card" href="">Github</a>
+        <a class="btn btn-primary card" href="">Zip</a>
+        <a class="btn btn-primary card" href="#tutorial">Tutorial</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Place working demo in here -->
+<div class="section padding-extra white" id="demo">
+
+    <h1 style = "text-align:center">DashJazz IoT Connector</h1>
+    <p style = "padding:30px"> This is a working demo of the DashJazz IoT connector. All you need to do is to connect your embedded devices (Arduino/Raspberry Pi), publish
+    messages to the 'iotchannel', and subscribe to 'userz'. You will see the device UUID appear on the right most column under online
+    devices, and also be able to chat with using the chat box below. If you are new to devices such as Arduino and the Raspberry Pi, dont worry!
+    This page elucidates all the details for you to build your own custom dashboard, with links to the GitHub repositories for all the 
+    material. 
+    </p>
+	<div class = "row">
+    	<div style ="border-radius:25px">
+   			<div class = "container" > 
+    			<p style = " font-size:100%; color:red">CHAT WITH YOUR ONLINE DEVICE HERE</p>
+				<div class = "col-md-4" style = "background-color:#f8f8f8; border:5px solid #d8d8d8; border-radius:15px; padding:10px; border-top: thick solid #d8d8d8;box-shadow : 2px 2px #c0c0c0" >
+					<div id = "chatz" >
+						<div class = "bubble bubble--alt">
+							<img src = "human.jpg" height = "45" width="45">  Hey there device! 
+						</div>
+						<div class = "bubble">
+							<img src = "embedded_device.png" height = "45" width="45">  Hey human, whats up? 
+						</div>
+						<div class = "bubble bubble--alt">
+						<img src = "human.jpg" height = "45" width="45">  Ping me! 
+						</div>
+					</div>
+				</div>
+				<div class = "col-md-4" style = "background-color:#f8f8f8;border:5px solid #d8d8d8; border-radius:15px; padding:25px; border-top: thick solid #d8d8d8;box-shadow : 2px 2px #c0c0c0">
+					
+					<button id="dashboard" class = "btn btn-primary card"  style ="background-color:red" 
+					>Ping your devices!!</button>
+					<br></br>
+   					<input type="text" size ="25" style ="background-color:#bfbdbd; border:solid 1px #bfbdbd;
+   					padding-left:10px; box-shadow: 2px 2px 0 #828181 inset;  border-radius:5px; 
+    				font-family: Sansation,Arial; color:black;" id="clientText" value="Hey There!!"; 
+    				onfocus="if(this.value != ''){this.value ='';this.style.color='#black'}"><br /></input>
+   					<p style = "font-size : 100%"> Send messages to your online devices, and watch them reply back in real time in
+   					the chat box to your left.
+   					</p>
+   					<br>
+				</div>
+				<div class="col-md-4" style = "background-color:#f8f8f8;border:5px solid #d8d8d8; border-radius:15px; padding:10px; border-top: thick solid #d8d8d8;box-shadow : 2px 2px #c0c0c0">
+					<div id="chat">
+					</div>
+     				<div id = "online">
+						<ul id ="peeps" style = "list-style-position:inside;">
+						
+						<h2  style ="font-size:200%; text-align:center"> Online devices <i class ="fa fa-spinner fa-spin"></i></h2>
+						<br>
+							<li style ="text-align:center"><b> Pi123 </b></li>
+							
+							<li style ="text-align:center"><b> Arduino </b></li>
+						</ul>
+					</div>
+    				<br><br><br><br>
+				</div>
+   			</div>
+   		</div>		
+	</div>
+	<p style = "padding:30px"><strong>IMPORTANT: </strong>The devices that are shown now as Pi123 and Arduino are generated randomly
+	to show you how the dashboard will work. Connect your devices to see them appear on screen.
+	</div>
+   	
+
+</div>
+
+<!-- Text in this block will be oriented to the right  -->
+<div class="section padding-extra gray">
+  <div class="container">
+    <div class="col-sm-9 pull-right">
+      <div class="headline h3">Basic Introduction</div>
+      <p>
+        The following are the features provided by this dashboard. 
+      </p>
+      <div class="ul">
+          <li><strong>Send: </strong><i class ="fa fa-send"></i> <p>Send() lets you connect to a channel, and to publish
+           messages to every other device listening on that channel </p></li>
+          <li><strong>Connect: </strong><i class ="fa fa-wechat"></i><p>Connect() allows you to listen to other devices, 
+          be it an Arduino board, a Raspberry Pi or any other embedded device that talks PubNub. </p></li>
+          <li><strong>Who's online </strong><i class = "fa fa-users"></i><p>What is the point of sending and connecting if you can't see who's online? 
+          This simple dashboard lets you check the 
+          different devices online at any instant.</p></li>
+        </div>
+    </div>
+    <div class="col-sm-3 pull-left">
+      <img src="http://www.pubnub.com/static/images/illustrations/cloud-red.png" alt="Realtime Red cloud" >
+    </div>
+  </div>
+</div>
+
+<!-- Text in this block will be oriented to the left  -->
+<div class="section white padding-extra">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="headline h3">Raspberry Pi</div>
+      
+        <p style ="font-size:100%">This post takes you through the process of connecting the Raspberry Pi to the PubNub 
+          network and communicating to other devices via the dashboard.</p>
+        <p style ="font-size:100%">The <a href = "http://www.raspberrypi.org">Raspberry Pi </a>is a credit-card sized computer that plugs into your TV
+             and a keyboard. 
+            It is a capable little computer which can be used in electronics projects, and for many of the 
+            things that your desktop PC does, like spreadsheets, word-processing and games. <br> </br>
+            PubNub provides extensive documentation and support for the Raspberry Pi <a href = "http://www.PubNub.com/documentation/">here </a>. Once
+            you are up and running with the Pi, feel free to choose your favorite language and start connecting.
+            I have used <a href = "https://github.com/PubNub/python"> Python </a> for this project. </p>
+       <p style ="font-size:100%"> <strong> STEP 1: </strong> Connect the Pi to a monitor, keyboard, mouse and ethernet cable. Login to
+            the Raspberry Pi OS and open IDLE, the python IDE.
+        </p>
+        <br>
+        <p style ="font-size:100%"> <strong> STEP 2: </strong> Open a new window and paste the following code.
+        </p>
+       <!-- Code Blocks -->
+<!-- It should be pretty clear how to add or remove lines -->
+<div class="section white padding-extra">
+  <div class="container">
+    <div class="col-sm-5">
+      <div class="code-wrap flex">
+        <div class="code-header">
+          <ul>
+            <li class="red"><i class="fa fa-circle"></i></li>
+            <li class="yellow"><i class="fa fa-circle"></i></li>
+            <li class="green"><i class="fa fa-circle"></i></li>
+          </ul>
+        </div>
+        <div class="code-content">
+
+          <ol class="list-code animate" data-type="one">
+            <li class="code-line-wrap">
+              <ol class="code-line-numbers">
+                <li>1</li>
+                <li>2</li>
+                <br>
+                <li>3</li>
+                
+                <li>4</li>
+                <br>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                
+                <li>9</li>
+                
+                <br>
+                
+                <li>10</li>
+             
+                <br>
+                <li>11</li>
+              </ol>
+            </li>
+            <li>from PubNub import PubNub</li>
+            <li>from iotconnector import iotbridge</li>
+            <br>
+            <li>pi = iotbridge(publish_key =  <span class="blue">'demo'</span>, 
+		subscribe_key =  <span class="blue">'demo'</span>, 
+		uuid =  <span class="blue">'PI'</span>)</li>
+		<br>
+		<li>channel =  <span class="blue">'iotchannel'</span></li>
+		<li>channel2 =  <span class="blue">'userz'</span></li>
+		<li>message =  <span class="blue">"hello from pi"</span></li>
+		<li>def callbackfn(message):</li>
+            <li class="indent">print(message)</li>
+            <br>
+            <li>pi.send(channel, message)</li>
+            <br>
+            <li>pi.connect(channel2, callbackfn)</li>
+           
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div class="headline h3">Code Details</div>
+      <p>
+        <p style ="font-size:100%"> The above code lets you set up the following :
+            <ul>
+              <li> publish key using "publish_key" </li>
+              <li> subscribe key using "subscribe_key" </li>
+              <li> UUID using "uuid" </li>
+              <li> channel you wish to subscribe and publish to using "channel"</li>
+              <li> message that you want to send. This is a JSON message. </li>
+            </ul> 
+        </p>
+        
+      </p>
+    </div>
+    </div>
+    </div>
+        
+        <p style ="font-size:100%"> <strong> STEP 3: </strong> Run this program,
+      and see your device UUID appear on the dashboard. You can also bi-directionally communicate between your embedded devices
+      and the dashboard.
+    	Thats it!  
+    	</p>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+<!-- Text in this block will be oriented to the right  -->
+<div class="section padding-extra gray">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="headline h3">Arduino</div>
+      <p>
+       The <a href = "http://arduino.cc">Arduino </a>is a tool for making computers that can sense and control 
+            more of the physical world than your desktop computer. It's an open-source physical computing 
+            platform based on a simple microcontroller board, and a development environment for writing software 
+            for the board.  <br> 
+            PubNub provides extensive documentation and support for Arduino. You
+            can find the SDK for Arduino <a href="https://github.com/PubNub/arduino">here</a>.
+      </p>
+   
+    <br>
+    <p style ="font-size:100%"> <strong> STEP 1: </strong> Connect the Arduino to a computer using the USB port. Using an 
+		Ethernet shield, connect the 
+            Arduino board to the internet. Now download the Arduino IDE for your PC<a href ="http://arduino.cc/en/main/software"> here </a>.
+            Full and comprehensive instructions for installing the software for Windows, Linux and Mac can be found at this site.
+        </p>
+        <p style ="font-size:100%"> Once you have successfully installed the Arduino Software and, depending on your platform, USB drivers, you should now be
+            able to upload the below program to the Arduino board.
+        </p>
+            <br>
+        <p style ="font-size:100%"> <strong> STEP 2: </strong> Open a new sketch and paste the following code.
+        </p>
+        
+        <!-- First code block for Arduino -->
+           <!-- Code Blocks -->
+<!-- It should be pretty clear how to add or remove lines -->
+<div class="section gray padding-extra">
+  <div class="container">
+    <div class="col-sm-5">
+      <div class="code-wrap flex">
+        <div class="code-header">
+          <ul>
+            <li class="red"><i class="fa fa-circle"></i></li>
+            <li class="yellow"><i class="fa fa-circle"></i></li>
+            <li class="green"><i class="fa fa-circle"></i></li>
+          </ul>
+        </div>
+        <div class="code-content">
+
+          <ol class="list-code animate" data-type="one">
+            <li class="code-line-wrap">
+              <ol class="code-line-numbers">
+                <li>1</li>
+                <li>2</li>
+                
+                <li>3</li>
+                
+                <li>4</li>
+                <br>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <br>
+                <li>9</li>
+                <li>10</li>
+                <br>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <br>
+                <li>16</li>
+             
+              </ol>
+            </li>
+            <li>#include &ltSPI.h&gt</li>
+            <li>#include &ltEthernet.h&gt</li>
+            <li>#include "string.h"</li>
+            <li>#include "ardui_wrapper.h"</li>
+            <br>
+            <li>// Some Ethernet shields have a MAC address printed on a sticker on the 
+shield;</li>
+			<li>// fill in that address here, or choose your own at random:</li>
+         	<br>
+            <li>byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };</li>
+            <br>
+           	<li>char pubkey[] = <span class="blue">"demo";</span></li>
+			<li>char subkey[] = <span class="blue">"demo";</span></li>
+			<li>char channel[] = <span class="blue">"iotchannel";</span></li>
+			<li>char channel2[] = <span class="blue">"userz"</span></li>
+			<li>char uuid[] = <span class="blue">"Arduino";</span></li>
+			<br>
+			<li>dashboard iot;</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div class="headline h3">Code Details</div>
+      <p>
+        <p style ="font-size:100%"> The above code lets you set up the following :
+            <ul>
+              <li> publish key using "pubkey" </li>
+              <li> subscribe key using "subkey" </li>
+              <li> UUID using "uuid" </li>
+              <li> Channel you wish to subscribe and publish to using "channel"</li>
+              <li> Create an instance of the dashboard called iot </li>
+            </ul> 
+        </p>
+        
+      </p>
+    </div>
+    </div>
+    </div>
+        <!-- end of First code block for Arduino -->
+        <!-- Code Blocks -->
+        
+        <!-- Second code block - defining functions -->
+<!-- It should be pretty clear how to add or remove lines -->
+<div class="section gray padding-extra">
+  <div class="container">
+    <div class="col-sm-5">
+      <div class="code-wrap flex">
+        <div class="code-header">
+          <ul>
+            <li class="red"><i class="fa fa-circle"></i></li>
+            <li class="yellow"><i class="fa fa-circle"></i></li>
+            <li class="green"><i class="fa fa-circle"></i></li>
+          </ul>
+        </div>
+        <div class="code-content">
+
+          <ol class="list-code animate" data-type="one">
+            <li class="code-line-wrap">
+              <ol class="code-line-numbers">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <br>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <br>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <br>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+               
+             
+              </ol>
+            </li>
+            <li>void initialize(){</li>
+			<li class="indent">Serial.begin(9600);</li>
+			<li class="indent">Serial.println("Serial set up");</li>
+			<br>
+			<li class="indent">while (!Ethernet.begin(mac)) {</li>
+			<li class="indent">Serial.println("Ethernet setup error");</li>
+			<li class="indent">delay(1000);</li>
+			<li class="indent">}</li>
+			<li class="indent">Serial.println("Ethernet set up");</li>
+			<li>}</li>
+			<br>
+			
+			<li>void do_something(String value){<li>
+          	<li class="indent">Serial.println("in the callback");</li>
+          	<li class="indent">Serial.println(value);</li>
+        	<li>}</li>
+			<br>
+			<li>void setup()</li>
+			<li class="indent">{</li>
+    		<li class="indent">initialize();</li>
+			<li class="indent">iot.dashinit( pubkey, subkey, uuid);</li>
+			<li class="indent">Serial.println("PubNub set up");</li>
+       		<li>}</li>
+           
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div class="headline h3">Initialize</div>
+      <p>
+        <p style ="font-size:100%"> The above code lets you set up the following :
+            <ul>
+              <li> Establish the ethernet connection to the arduino </li>
+              <li> Calls the initialize function to set the variables described above. </li>
+            </ul> 
+        </p>
+        
+      </p>
+    </div>
+    </div>
+    </div>
+
+
+      <!-- end of First code block for Arduino -->
+        <!-- Code Blocks -->
+        
+        <!-- Third code block - loop  -->
+<!-- It should be pretty clear how to add or remove lines -->
+<div class="section gray padding-extra">
+  <div class="container">
+    <div class="col-sm-5">
+      <div class="code-wrap flex">
+        <div class="code-header">
+          <ul>
+            <li class="red"><i class="fa fa-circle"></i></li>
+            <li class="yellow"><i class="fa fa-circle"></i></li>
+            <li class="green"><i class="fa fa-circle"></i></li>
+          </ul>
+        </div>
+        <div class="code-content">
+
+          <ol class="list-code animate" data-type="one">
+            <li class="code-line-wrap">
+              <ol class="code-line-numbers">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                
+                <li>4</li>
+                <br>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <br>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <br>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <br>
+                <li>14</li>
+                <li>15</li>
+              </ol>
+            </li>
+            
+            <li>void loop()</li>
+			<li>{</li>      
+        	<li class="indent">String returnmessage;</li>
+			<li class="indent">Ethernet.maintain();</li>
+        	<br>
+        	<li class="indent">//Publish</li>
+			<li class="indent">Serial.println("publishing a message");</li>
+        	<li class="indent">iot.dashsend(channel,"\"Hey There\"");</li>
+        	<br>
+
+        	<li class="indent">//Subscribe</li>
+			<li class="indent">Serial.println("waiting to receive a message");</li>
+        	<li class="indent">returnmessage = iot.dashconnect(channel2);</li>
+        	<br>
+        	<li class="indent">// callback function of sorts, to work with the received message</li>
+        	<li class="indent">do_something(returnmessage);</li>
+        	<br>
+			<li class="indent">Serial.println();</li>
+			<li>}</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div class="headline h3">Loop()</div>
+      <p>
+        <p style ="font-size:100%"> The above code calls the following functions :
+            <ul>
+              <li> iot.dashsend : This will publish a message to the 'channel' </li>
+              <li> iot.dashconnect : This will subscribe to the 'channel' within paranthesis, to listen to messages published on that channel</li>
+              <li> do_somethig(returnmessage) : This has been defined previously, and will let you consume the information that you receive
+              from other devices, through the dashconnect function. </li>
+            </ul> 
+        </p>
+        
+      </p>
+    </div>
+     	
+    </div>
+    
+    </div>
+    <p style ="font-size:100%"> <strong> STEP 3: </strong> Upload this program on your Arduino,
+      and see your device UUID appear on the dashboard. You can also bi-directionally communicate between your embedded devices
+      and the dashboard.
+    	Thats it! 
+    	</p>
+    	</div>
+    	</div>
+
+
+<!-- Text in this block will be oriented to the left  -->
+<div class="section white padding-extra">
+  <div class="container">
+    <div class="col-sm-9">
+      <div class="headline h3">PubNub-GitHub Repository</div>
+      <p style ="font-size:100%"> <strong><a href = "https://github.com/banasrini/Test">https://github.com/banasrini/Test</a></strong></p>
+        			<p style ="font-size:100%">Open Source and free to get started easily by visiting the GitHub Repository which allows you to easily
+         			copy the code to your local machine and begin testing.</p>
+        
+    </div>
+    <div class="col-sm-3">
+      <img src="http://www.pubnub.com/static/images/illustrations/cloud-red.png" alt="Realtime Red cloud" >
+    </div>
+  </div>
+</div>
+
+
+<!--
+This section is to add the relevent blog posts to this application and to display the features used by the application
+Add as many as youd like
+-->
+<div class="section padding-extra gray">
+  <div class="container">
+    <div class="col-sm-6">
+      <div class="headline h3">Blog Posts</div>
+      <ul>
+        <li><a href="http://www.pubnub.com/blog/connect-arduino-to-pubnub-in-2-steps/">Connecting Arduino to PubNub</a></li>
+        <li><a href="http://www.pubnub.com/blog/raspberry-pi-to-pubnub-in-less-than-10-lines-of-code/">Connecting Raspberry Pi to PubNub</a></li>
+        <li><a href="">Device Discovery for IoT</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-6">
+      <div class="headline h3">Features Used</div>
+      <ul>
+        <li><a href="/how-it-works/data-streams/" target="_blank">Data Streams</a></li>
+        <li><a href="/how-it-works/presence/" target="_blank">Presence</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Associated JS needed for the demo can be linked here, using an iFrame to template in the demo is to be preferred though -->
+<!-- <script src ="/Users/bhavana/Desktop/bootstrap/scripts/client-arduino.js"></script> -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/Users/bhavana/Desktop/bootstrap/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="http://cdn.pubnub.com/pubnub.min.js"></script>
+   <!-- <script src ="/Users/bhavana/Desktop/bootstrap/scripts/client-arduino.js"></script> -->
+  	<script src="/Users/bhavana/Desktop/chat.js"></script>
+
+<!-- ************************************************* -->
+
+<!-- Friendly editors! Please edit from here up ONLY -->
+
+<!-- ************************************************* -->
+
+
+<section class="red">
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <h4 class="text-thin"><span class="break">Start Building</span> Real-time Apps Now!</h4>
+    </div>
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <a href="/get-started/#get-started" class="btn btn-white btn-large text-red text-center brt">Get Started</a>
+      </div>
+      <div class="col-sm-4"></div>
+  </div>
+</section>
+    <footer>
+      <div class="container">
+
+        <div class="row text-center">
+
+          <div class="col-sm-9 clearfix">
+            <nav class="nav-footer">
+              <ul class="nav">
+                <li class="first"><a href="/how-it-works/">How It Works</a></li>
+                <li><a href="/how-it-works/data-streams/">Data Streams</a></li>
+                <li><a href="/how-it-works/presence/">Presence</a></li>
+                <li><a href="/how-it-works/storage-and-playback/">Storage &amp; Playback</a></li>
+                <li><a href="/how-it-works/mobile/">Mobile Push Gateway</a></li>
+                <li><a href="/how-it-works/analytics/">Analytics</a></li>
+                <li><a href="/how-it-works/security/">Security</a></li>
+                <li><a href="/how-it-works/network/">Network</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="/pricing/">Pricing</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="/developers/">Developers</a></li>
+                <li><a href="/docs/javascript/javascript-sdk.html">Docs</a></li>
+                <li><a href="/console/">Dev Console</a></li>
+                <li><a href="https://help.pubnub.com/home" target="_blank">Support</a></li>
+                <li><a href="/demos/">Demos</a></li>
+                <li><a href="/quick-start-guides/">Quick Start Guides</a></li>
+                <li><a href="/docs/javascript/tutorial/data-push.html">Tutorials</a></li>
+                <li><a href="/websockets/">Websockets</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="/customers/">Customers</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="/company/">Company</a></li>
+                <li><a href="/company/team/">Team</a></li>
+                <li><a href="/company/leadership/">Leadership</a></li>
+                <li><a href="/press/">Press &amp; News</a></li>
+                <li><a href="/events/">Events</a></li>
+                <li><a href="/company/careers/">Careers</a></li>
+                <li><a href="/company/contact-us/">Contact Us</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="first"><a href="/blog/">Blog</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-sm-3">
+            <nav class="nav-social pull-right">
+              <ul class="nav">
+                <li><a href="http://twitter.com/PubNub" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="http://www.linkedin.com/company/pubnub" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="http://www.facebook.com/PubNub" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://plus.google.com/116291363909949130218/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="http://www.pubnub.com/blog/feed/" target="_blank"><i class="fa fa-rss"></i></a></li>
+                <li><a href="http://vimeo.com/pubnub" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+                <li><a href="http://www.youtube.com/pubnubtv" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+              </ul>
+            </nav>
+            <nav class="nav-footer pull-right ">
+              <ul class="nav text-right">
+                <li><small>&copy; 2009-2014 PubNub, Inc.</small></li>
+                <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+
+    <div id="get-started" class="modal-container">
+      <div class="form-wrap form-wrap-modal hide-labels">
+        <a href="/" class="close"><i class="fa fa-times-circle"></i></a>
+        <h3>Get Started</h3>
+        <div id="error-codes" class="alert alert-danger" style="display:none;"></div>
+<form id="sign-up-form-partial" action="http://pn.localhost.com/api/users" method="POST" class="form-general">
+        <label for="first-name">First Name</label>
+        <input name="first" type="text" id="first-name" placeholder="First Name *" required>
+        <label for="last-name">Last Name</label>
+        <input name="last" type="text" id="last-name" placeholder="Last Name *" required>
+        <label for="company">Company</label>
+        <input name="company" type="text" id="company" placeholder="Company *"required>
+        <label for="company">Phone Number</label>
+        <input name="phone" type="text" id="phone" placeholder="Phone">
+        <label for="email-2">Email</label>
+        <input name="email" type="email" id="email-2" placeholder="Email *" required>
+        <label for="password">Password</label>
+        <input name="password" type="password" id="password" placeholder="Password *" required>
+        <input type="hidden" value="1" name="xsite" />
+        <p>By clicking <span id="create_account_text">Create Free Account</span>, you agree to <a href="/terms-and-conditions/" target="_blank">PubNub's terms and conditions</a>.</p>
+        <input type="submit" value="Create Free Account" id="create_account_btn" class="btn btn-primary">
+        <div id="utms">
+            <input id="utm_source"   type="hidden" name="utm_source"   value="">
+            <input id="utm_medium"   type="hidden" name="utm_medium"   value="">
+            <input id="utm_content"  type="hidden" name="utm_content"  value="">
+            <input id="utm_campaign" type="hidden" name="utm_campaign" value="">
+            <input id="utm_keyword"  type="hidden" name="utm_keyword"  value="">
+        </div>
+</form>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+
+    <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+    <script src="http://www.pubnub.com/static/js/main.js?ts=1403114132"></script>
+
+    
+    
+
+    <div id="loading">
+      <div class="mask"></div>
+      <div class="indication">
+        <img src="http://www.pubnub.com/static/images/loading.gif" />
+        <h3 class="text-red">Loading...</h3>
+      </div>
+    </div>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1009365105;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1009365105/?value=0&amp;guid=ON&amp;script=0"/>
+  </div>
+  </noscript>
+  <script type="text/javascript">var bf_url="pubnub";(function(){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="//d2sdf28wg0skh3.cloudfront.net/bf.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+  </body>
+</html>
