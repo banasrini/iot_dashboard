@@ -216,8 +216,7 @@
       <div class="col-sm-6 col-sm-offset-3">
         <p class="text-center">
            PubNub introduces the simplest IoT dashboard that helps you detect online devices and also talk to them bidirectionally, in real-time.
-            By using PubNub, you can build these dashboards with just a few lines of code. Get out 
-        your favorite embedded device and start connecting! This dashboard lets you connect an Arduino to a Raspberry Pi, lets them
+            This dashboard lets you connect an Arduino to a Raspberry Pi, lets them
         talk bidirectionally to each other and you can view which device is online at any instant. </p>
       </div>
     </div>
@@ -530,7 +529,7 @@ shield;</li>
     <div class="col-sm-7">
       <div class="headline h3">Code Details</div>
       <p>
-        <p style ="font-size:100%"> The above code lets you set up the following :
+        <p style ="font-size:100%"> This code lets you set up the following :
             <ul>
               <li> publish key using "pubkey" </li>
               <li> subscribe key using "subkey" </li>
@@ -622,7 +621,7 @@ shield;</li>
     <div class="col-sm-7">
       <div class="headline h3">Initialize</div>
       <p>
-        <p style ="font-size:100%"> The above code lets you set up the following :
+        <p style ="font-size:100%"> This code lets you set up the following :
             <ul>
               <li> Establish the ethernet connection to the arduino </li>
               <li> Calls the initialize function to set the variables described above. </li>
@@ -705,11 +704,11 @@ shield;</li>
     <div class="col-sm-7">
       <div class="headline h3">Loop()</div>
       <p>
-        <p style ="font-size:100%"> The above code calls the following functions :
+        <p style ="font-size:100%"> This code calls the following functions :
             <ul>
               <li> iot.dashsend : This will publish a message to the 'channel' </li>
               <li> iot.dashconnect : This will subscribe to the 'channel' within paranthesis, to listen to messages published on that channel</li>
-              <li> do_somethig(returnmessage) : This has been defined previously, and will let you consume the information that you receive
+              <li> do_something(returnmessage) : This has been defined previously, and will let you consume the information that you receive
               from other devices, through the dashconnect function. </li>
             </ul> 
         </p>
@@ -763,8 +762,8 @@ Add as many as youd like
     <div class="col-sm-6">
       <div class="headline h3">Features Used</div>
       <ul>
-        <li><a href="/how-it-works/data-streams/" target="_blank">Data Streams</a></li>
-        <li><a href="/how-it-works/presence/" target="_blank">Presence</a></li>
+        <li><a href="http://www.pubnub.com/docs/javascript/overview/data-push.html" target="_blank">Data Streams</a></li>
+        <li><a href="http://www.pubnub.com/docs/javascript/overview/presence.html" target="_blank">Presence</a></li>
       </ul>
     </div>
   </div>
